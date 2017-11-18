@@ -24,7 +24,7 @@ public class Input {
 		Float retFloat = Float.MAX_VALUE;
 		while(retFloat.equals(Float.MAX_VALUE)) {
 			try {
-				float f = sc.nextInt();
+				float f = sc.nextFloat();
 				retFloat = f;
 			}catch(InputMismatchException ime) {
 				System.out.println("Wrong format for float. input correct float: ");
@@ -55,13 +55,27 @@ public class Input {
 				String s = sc.next();
 				retStr = s;
 			}catch(InputMismatchException ime) {
-				System.out.println("Wrong format for float. input correct float: ");
+				System.out.println("Wrong format for string. Input correct string: ");
 				sc = new Scanner(System.in);
 			}
 		}
 		return retStr;
 	}
 
+	public static String get_line() {
+		String retLn = "";
+		while(retLn.equals("")) {
+			try {
+				String s = sc.nextLine();
+				retLn = s;
+			}catch(InputMismatchException ime) {
+				System.out.println("Wrong format for line. Input correct line: ");
+				sc = new Scanner(System.in);
+			}
+		}
+		return retLn;
+	}
+	
 	public static void print(String s) {
 		System.out.print(s);
 	}

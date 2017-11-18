@@ -1,4 +1,4 @@
-package repasoJava;
+package src4;
 
 public class Animal {
 	 boolean esMascota;
